@@ -1,6 +1,6 @@
 <h1>タスクリスト</h1>
 
-<% if @tasks.any? %>
+
   <table class="table table-striped">
     <thead>
       <tr>
@@ -10,7 +10,7 @@
       </tr>
     </thead>
     <tbody>
-      <% @tasks.each do |task| %>
+      <% tasks.each do |task| %>
         <tr>
           <td><%= link_to task.id, task %></td>
           <td><%= task.status %></td>
@@ -20,12 +20,10 @@
     </tbody>
   </table>
   <div>
-    <%= paginate @tasks %>
+    <%= paginate tasks %>
   </div>
-<% end %>
 
 
 
-<%= paginate @tasks %>
-
+<%#
 <%= link_to '新規タスクの投稿', new_task_path, class: "btn btn-primary" %>

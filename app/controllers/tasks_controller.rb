@@ -3,9 +3,7 @@ class TasksController < ApplicationController
   before_action :require_user_logged_in
   before_action :correct_user, only: [:destroy]
 
-  def index
-    #@tasks = Task.order(id: :desc).page(params[:page]).per(5)
-  end
+
 
   def show
     set_task

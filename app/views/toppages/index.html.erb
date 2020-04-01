@@ -1,10 +1,10 @@
 
 <% if logged_in? %>
   <div class="row">
-    <aside class="col-sm-4">
+    <div class="col-sm-6">
       <%= render 'tasks/form', task: @task %>
-    </aside>
-    <div class="col-sm-8">
+    </div>
+    <div class="col-sm-6">
       <%= render 'tasks/index', tasks: @tasks %>
     </div>
   </div>

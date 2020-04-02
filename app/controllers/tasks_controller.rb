@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:show, :edit, :update]
+  #before_action :set_task, only: [:edit, :update]
   before_action :require_user_logged_in
   before_action :correct_user, only: [:show,:edit,:update,:destroy]
 
@@ -8,7 +8,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    set_task
+    #set_task
 
   end
 
@@ -29,12 +29,12 @@ class TasksController < ApplicationController
   end
 
   def edit
-    set_task
+    #set_task
 
   end
 
  def update
-   set_task
+   #set_task
 
     if @task.update(task_params)
       flash[:success] = 'Taskは正常に更新されました'
@@ -53,9 +53,9 @@ class TasksController < ApplicationController
 
   private
 
-  def set_task
-    @task = current_user.tasks.find_by(id: params[:id])
-  end
+  #def set_task
+   # @task = current_user.tasks.find_by(id: params[:id])
+  #end
 
   # Strong Parameter
   def task_params
